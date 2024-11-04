@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.auth.OtpActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/blue"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon_white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="OTP Verification"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Verify your OTP for +923090768895"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lora"
+        tools:ignore="HardcodedText,RtlCompat" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/pin_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/counter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:clickable="true"
+        android:cursorVisible="true"
+        android:focusable="true"
+        android:inputType="number"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:cursorColor="@color/black"
+        app:cursorWidth="@dimen/_2sdp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="@dimen/_40sdp"
+        app:itemRadius="@dimen/_10sdp"
+        app:itemSpacing="@dimen/_3sdp"
+        app:itemWidth="@dimen/_42sdp"
+        app:lineColor="@color/black"
+        app:viewType="rectangle" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/resendPin"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:text="60 sec"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resendPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/verifyBtn"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:backgroundTint="@color/purchaseColor"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_14sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="Resend"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_14sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_5sdp" />
+
+</RelativeLayout>

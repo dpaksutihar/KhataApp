@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_background"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_12sdp"
+    tools:ignore="RtlSymmetry">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:drawableStart="@drawable/add_amount_icon"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Link trans"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawableStart="@drawable/edit_consumer"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Edit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:drawableStart="@drawable/baseline_delete_24"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Delete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

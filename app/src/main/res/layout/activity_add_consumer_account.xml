@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.AddConsumerAccount">
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/blue"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon_white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Add new consumer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_view">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbars="none"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    app:cardBackgroundColor="#F6F6F6"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_minus10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        tools:ignore="UselessLeaf">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/lora"
+                            android:text="Full Name"
+                            android:textColor="@color/black2"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/et_bg"
+                            android:fontFamily="@font/lora"
+                            android:hint="Enter Full Name"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName"
+                            android:padding="@dimen/_14sdp"
+                            android:singleLine="true"
+                            android:textAlignment="textStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black2"
+                            android:textColorHint="@color/black2"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/lora"
+                            android:text="Phone Number"
+                            android:textColor="@color/black2"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <RelativeLayout
+                            android:background="@drawable/et_bg"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.hbb20.CountryCodePicker
+                                android:id="@+id/ccp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:paddingVertical="@dimen/_8sdp"
+                                app:ccpDialog_backgroundColor="@color/white"
+                                app:ccp_autoDetectCountry="true"
+                                app:ccp_contentColor="@color/black"
+                                app:ccp_showArrow="true"
+                                app:ccp_showFlag="false"
+                                app:ccp_showNameCode="false" />
+
+                            <EditText
+                                android:background="@android:color/transparent"
+                                android:layout_toEndOf="@id/ccp"
+                                android:id="@+id/et_phone_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/lora"
+                                android:hint="Enter Your Phone Number."
+                                android:importantForAutofill="no"
+                                android:inputType="phone"
+                                android:maxLength="11"
+                                android:padding="@dimen/_14sdp"
+                                android:singleLine="true"
+                                android:textAlignment="textStart"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/black2"
+                                android:textColorHint="@color/black2"
+                                android:textSize="@dimen/_10ssp"
+                                tools:ignore="HardcodedText,LabelFor" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/lora"
+                            android:text="Address"
+                            android:textColor="@color/black2"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/et_bg"
+                            android:fontFamily="@font/lora"
+                            android:hint="Enter Your Address"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:padding="@dimen/_14sdp"
+                            android:singleLine="true"
+                            android:textAlignment="textStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black2"
+                            android:textColorHint="@color/black2"
+                            android:textSize="@dimen/_10ssp"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/add_customer"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_43sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/view_ripple_effect"
+                            app:cardBackgroundColor="@color/blue"
+                            app:cardCornerRadius="@dimen/_14sdp"
+                            app:cardElevation="@dimen/_minus10sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center"
+                                android:layout_marginHorizontal="@dimen/_20sdp"
+                                android:layout_marginVertical="@dimen/_7sdp"
+                                android:src="@drawable/ic_add_customer"
+                                tools:ignore="ContentDescription" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/btn_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:text="Add Now"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold"
+                                app:fontFamily="@font/lora"
+                                tools:ignore="HardcodedText,RtlCompat" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:background="@drawable/register_rv_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:padding="@dimen/_7sdp"
+        tools:ignore="UselessLeaf,UselessParent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/view"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText,RtlCompat" />
+
+
+                <ImageButton
+                    android:id="@+id/remind_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_reminder_small"
+                    android:background="@android:color/transparent"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/amountPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="Amount Paid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText,RtlCompat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="end"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText,RtlCompat" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="Balance:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText,RtlCompat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:layout_toEndOf="@+id/text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText,RtlCompat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/due"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Due"
+                    android:textColor="#FA000000"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText,RtlCompat" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

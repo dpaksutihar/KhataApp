@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Account Status"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lora" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toggleAccount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/view_ripple_effect"
+        app:cardBackgroundColor="@color/expenseColor"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:cardElevation="@dimen/_minus10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/accountStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="Not Active"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

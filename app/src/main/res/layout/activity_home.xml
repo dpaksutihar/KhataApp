@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:background="@drawable/home_top_bg"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_34sdp"
+            android:paddingHorizontal="@dimen/_5sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/khata_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Khata APP"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22ssp"
+                android:textStyle="bold"
+                app:fontFamily="@font/lora_bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_notification"
+                android:visibility="invisible"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            tools:ignore="UselessLeaf">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/white"
+                    app:fontFamily="@font/lora"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance : "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/receivable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/received_icon_small"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:drawableStart="@drawable/arrow_send"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                    android:id="@+id/vendorBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/register_rv_bg"
+                    android:padding="@dimen/_5sdp">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Vendors"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/lora"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/customerBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/register_rv_bg"
+                    android:padding="@dimen/_5sdp">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Customers"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/lora"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_transactionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                android:background="@drawable/view_ripple_effect"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_2">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/employment_management"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="Add a transaction"
+                        android:textAlignment="center"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontFamily="@font/lora_bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="@dimen/_10sdp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:text="Consumers"-->
+            <!--                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+            <!--                    android:textColor="@color/blue" />-->
+
+            <!--                <ImageButton-->
+            <!--                    android:id="@+id/addConsumer"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:background="@drawable/bg_round"-->
+            <!--                    android:backgroundTint="@color/white"-->
+            <!--                    android:contentDescription="@null"-->
+            <!--                    android:padding="@dimen/_3sdp"-->
+            <!--                    android:src="@drawable/add_icon" />-->
+
+            <!--            </RelativeLayout>-->
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/recyclerView"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="@dimen/_5sdp"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+            <!--                app:spanCount="2"-->
+            <!--                tools:listitem="@layout/item_customers" />-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:weightSum="2">-->
+
+            <!--                <FrameLayout-->
+            <!--                    android:id="@+id/transaction_recording"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="@dimen/_80sdp"-->
+            <!--                    android:layout_marginEnd="@dimen/_5sdp"-->
+            <!--                    android:layout_weight="0.9"-->
+            <!--                    android:background="@drawable/view_ripple_effect"-->
+            <!--                    tools:ignore="UselessParent">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:background="@drawable/bg_1">-->
+
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_centerInParent="true"-->
+            <!--                            android:drawableStart="@drawable/transaction_data"-->
+            <!--                            android:drawablePadding="@dimen/_5sdp"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:text="Transaction\nRecording"-->
+            <!--                            android:textAlignment="center"-->
+            <!--                            android:textColor="@color/black2"-->
+            <!--                            android:textSize="@dimen/_12ssp"-->
+            <!--                            app:fontFamily="@font/lora_bold"-->
+            <!--                            tools:ignore="HardcodedText" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </FrameLayout>-->
+
+            <!--                <FrameLayout-->
+            <!--                    android:id="@+id/consumer_btn"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="@dimen/_80sdp"-->
+            <!--                    android:layout_marginStart="@dimen/_5sdp"-->
+            <!--                    android:layout_weight="1.1"-->
+            <!--                    android:background="@drawable/view_ripple_effect"-->
+            <!--                    tools:ignore="UselessParent">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:background="@drawable/bg_2">-->
+
+            <!--                        <com.google.android.material.textview.MaterialTextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_centerInParent="true"-->
+            <!--                            android:drawableStart="@drawable/employment_management"-->
+            <!--                            android:drawablePadding="@dimen/_5sdp"-->
+            <!--                            android:gravity="center"-->
+            <!--                            android:text="Consumer\nManagement"-->
+            <!--                            android:textAlignment="center"-->
+            <!--                            android:textColor="@color/black2"-->
+            <!--                            android:textSize="@dimen/_12ssp"-->
+            <!--                            app:fontFamily="@font/lora_bold"-->
+            <!--                            tools:ignore="HardcodedText" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </FrameLayout>-->
+
+            <!--            </LinearLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/accountBalance"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_80sdp"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:background="@drawable/view_ripple_effect"-->
+<!--                tools:ignore="UselessParent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/bg_3">-->
+
+<!--                    <com.google.android.material.textview.MaterialTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:drawableStart="@drawable/account_57"-->
+<!--                        android:drawablePadding="@dimen/_5sdp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Account Balances"-->
+<!--                        android:textColor="@color/black2"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        app:fontFamily="@font/lora_bold"-->
+<!--                        tools:ignore="HardcodedText" />-->
+
+<!--                </RelativeLayout>-->
+
+<!--            </FrameLayout>-->
+
+            <FrameLayout
+                android:id="@+id/reporting_analytics"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/view_ripple_effect"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_4">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/data_analysis_baby_analysis"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="Reporting and Analytics"
+                        android:textAlignment="center"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontFamily="@font/lora_bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/export_btn"
+                android:background="@drawable/view_ripple_effect"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_3">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/export_24"
+                        android:drawablePadding="@dimen/_7sdp"
+                        android:drawableTint="#FFA8A8"
+                        android:gravity="center"
+                        android:text="Export"
+                        android:textAlignment="center"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontFamily="@font/lora_bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/backUp"
+                android:background="@drawable/view_ripple_effect"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/restore_3"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="BackUp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontFamily="@font/lora_bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/view_ripple_effect"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_4">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableStart="@drawable/baseline_login_24"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="Logout"
+                        android:textAlignment="center"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontFamily="@font/lora_bold"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

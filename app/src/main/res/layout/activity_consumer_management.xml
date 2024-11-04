@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.ConsumerManagementActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/blue"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_icon_white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Consumer Management"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/add_consumer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/bg_1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/add_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Add a vendor"
+            android:textAlignment="center"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/lora_bold"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/bg_1"
+        android:gravity="center|start"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Amount: 0 NRs"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Paid: 0 NRs"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/lora"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="Balance: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText,RtlCompat" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/text"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:fontFamily="@font/lora"
+                tools:ignore="HardcodedText,RtlCompat" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/search_drawable"
+        android:hint="Search"
+        android:padding="@dimen/_10sdp"
+        android:singleLine="true"
+        android:textColor="@color/black2"
+        android:textColorHint="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_customers_management" />
+
+</LinearLayout>

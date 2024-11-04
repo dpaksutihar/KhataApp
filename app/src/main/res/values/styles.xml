@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="corner">
+        <item name="cornerSizeTopLeft">@dimen/_18sdp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeBottomRight">@dimen/_18sdp</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_18sdp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/_18sdp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+</resources>

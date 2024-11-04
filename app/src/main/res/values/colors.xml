@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#008AFF</color>
+    <color name="black2">#1A242C</color>
+    <color name="sentColor">#D8B344</color>
+    <color name="receivedColor">#5BE661</color>
+
+    <color name="incomeColor">#03A9F4</color>
+    <color name="expenseColor">#E65B93</color>
+    <color name="red">#FF1313</color>
+    <color name="salesColor">#FF9100</color>
+    <color name="purchaseColor">#009688</color>
+
+</resources>
